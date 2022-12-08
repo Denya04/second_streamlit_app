@@ -1,3 +1,4 @@
 import streamlit
 
-streamlit.title('Zina"'"s Amazing Athleisure Catalog')
+txt_quote = "'"
+streamlit.title('Zina' + txt_quote + 's Amazing Athleisure Catalog')
