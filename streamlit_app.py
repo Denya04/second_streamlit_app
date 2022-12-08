@@ -11,14 +11,12 @@ my_cur.execute("SELECT * from catalog_for_website")
 my_catalog = my_cur.fetchall()
 
 df = pandas.DataFrame(my_catalog)
-
 streamlit.dataframe(my_catalog)
-
-
 my_cnx.close()
 
-color_selection = my_catalog.set_index(0)
 streamlit.stop()
+color_selection = my_catalog.set_index(0)
+
 
 option = streamlit.selectbox(
     'Pick a sweatsuit color or style:',
