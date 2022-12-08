@@ -12,12 +12,11 @@ my_catalog = my_cur.fetchall()
 
 streamlit.dataframe(my_catalog)
 
-streamlit.stop()
+
 my_cnx.close()
-streamlit.dataframe(my_data_rows)      
 
-color_selection = my_data_rows.set_index('COLOR_OR_STYLE')
-
+color_selection = my_data_rows.set_index(0)
+streamlit.stop()
 
 option = streamlit.selectbox(
     'Pick a sweatsuit color or style:',
