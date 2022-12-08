@@ -17,9 +17,9 @@ def get_catalog():
   my_data_rows = get_catalog()
   my_cnx.close()
   streamlit.dataframe(my_data_rows)      
-streamlit.stop()
-color_selection = my_data_rows.set_index('COLOR_OR_STYLE')
 
+color_selection = my_data_rows.set_index('COLOR_OR_STYLE')
+streamlit.stop()
 option = streamlit.selectbox(
     'Pick a sweatsuit color or style:',
      list(color_selection.index),[])
