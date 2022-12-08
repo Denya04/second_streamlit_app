@@ -12,7 +12,7 @@ def get_catalog():
        return my_cur.fetchall()
       
 # Add a button to load catalog list
-if streamlit.button('Get Catalog'):
+#if streamlit.button('Get Catalog'):
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
   my_data_rows = get_catalog()
   my_cnx.close()
