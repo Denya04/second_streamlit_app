@@ -14,14 +14,14 @@ df = pandas.DataFrame(my_catalog)
 streamlit.dataframe(my_catalog)
 my_cnx.close()
 
-streamlit.stop()
-color_selection = my_catalog.set_index(0)
+color_list = df[0].values.tolist()
 
 
 option = streamlit.selectbox(
     'Pick a sweatsuit color or style:',
-     list(color_selection.index),[])
+    color_list)
 
+streamlit.stop()
 #fruits_selected = streamlit.multiselect("Pick a sweatsuit color or style:", list(my_data_rows.index),[])
 #fruits_to_show = my_fruit_list.loc[fruits_selected]
 
