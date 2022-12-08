@@ -18,5 +18,9 @@ if streamlit.button('Get Catalog'):
   my_cnx.close()
   streamlit.dataframe(my_data_rows)      
 
-fruits_selected = streamlit.multiselect("Pick a sweatsuit color or style:", list(my_data_rows.index),[])
+option = st.selectbox(
+    'How would you like to be contacted?',
+    ('Email', 'Home phone', 'Mobile phone'))
+
+#fruits_selected = streamlit.multiselect("Pick a sweatsuit color or style:", list(my_data_rows.index),[])
 #fruits_to_show = my_fruit_list.loc[fruits_selected]
