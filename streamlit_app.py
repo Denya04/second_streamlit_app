@@ -12,7 +12,7 @@ my_catalog = my_cur.fetchall()
 
 df = pandas.DataFrame(my_catalog)
 streamlit.dataframe(my_catalog)
-my_cnx.close()
+#my_cnx.close()
 
 color_list = df[0].values.tolist()
 
