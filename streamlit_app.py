@@ -15,7 +15,7 @@ streamlit.dataframe(my_catalog)
 
 my_cnx.close()
 
-color_selection = my_data_rows.set_index(0)
+color_selection = my_catalog.set_index(0)
 streamlit.stop()
 
 option = streamlit.selectbox(
