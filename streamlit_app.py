@@ -1,6 +1,6 @@
 import streamlit
-import pandas
 import snowflake.connector
+import pandas
 
 txt_quote = "'"
 streamlit.title('Zina' + txt_quote + 's Amazing Athleisure Catalog')
@@ -9,6 +9,8 @@ my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from catalog_for_website")
 my_catalog = my_cur.fetchall()
+
+df = pandas.DataFrame(my_catalog)
 
 streamlit.dataframe(my_catalog)
 
