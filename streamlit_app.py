@@ -18,7 +18,7 @@ if streamlit.button('Get Catalog'):
   my_cnx.close()
   streamlit.dataframe(my_data_rows)      
 
-option = st.selectbox(
+option = streamlit.selectbox(
     'How would you like to be contacted?',
     ('Email', 'Home phone', 'Mobile phone'))
 
