@@ -10,7 +10,7 @@ my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from catalog_for_website")
 my_catalog = my_cur.fetchall()
 
-df = pandas.dataframe(my_catalog)
+streamlit.dataframe(my_catalog)
 
 streamlit.stop()
 my_cnx.close()
